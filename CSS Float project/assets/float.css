@@ -24,6 +24,13 @@ ul li a, figcaption a {
 of the header element */
 header > img {
   width: 100px;
+  float: left;
+}
+
+header:after {
+  content: ""; /* Empty content string */
+  display: block; /* Only block elements can clear */
+  clear: both;
 }
 
 /* Selects all elements with the class attribute "ingredients-list" */
@@ -73,7 +80,8 @@ h2 + .user_review {
 }
 
 nav {
-    display: inline-block;
+    float: right;
+
 }
 
 nav ul li {
@@ -90,16 +98,23 @@ body {
     width: 900px;
 }
 
+body section section:after {
+  content: ""; /* Empty content string */
+  display: block; /* Only block elements can clear */
+  background-color: red;
+  clear: both;
+}
+
 section {
     width: 700px;
-    display: inline-block;
+    /* display: inline-block; */
     vertical-align: top;
 }
 
 aside {
     width: 180px;
     margin-right: 15px;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .ingredients-list li {
@@ -123,4 +138,12 @@ textarea {
 label {
   display: block;
 }
+footer {
+}
 
+footer:before {
+  content: ""; /* Empty content string */
+  display: block; /* Only block elements can clear */
+  background-color: blue;
+  clear: both;
+}
